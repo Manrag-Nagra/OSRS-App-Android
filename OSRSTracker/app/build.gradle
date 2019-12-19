@@ -25,6 +25,11 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    repositories {
+        mavenCentral()
+        google()
+    }
+
     sourceSets { main { java.srcDirs = ['src/main/java', 'src/main/java/2'] } }
 }
 
@@ -44,6 +49,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.7.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
 
 
 }

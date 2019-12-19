@@ -35,6 +35,7 @@ class GEAdapter(private val result: List<Item>) : RecyclerView.Adapter<CustomVie
         val iconImage = holder.view.geImageIcon
         Picasso.get().load(item.icon_large).into(iconImage);
 
+
     }
 
 }

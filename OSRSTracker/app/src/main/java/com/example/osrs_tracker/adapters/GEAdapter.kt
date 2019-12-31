@@ -1,15 +1,19 @@
 package com.example.osrs_tracker.adapters
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.osrs_tracker.R
+import com.example.osrs_tracker.GEMoreInfo
 import com.example.osrs_tracker.models.Item
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.ge_row.view.*
 
-class GEAdapter(private val result: List<Item>) : RecyclerView.Adapter<CustomViewHolder>(){
+class GEAdapter(private val result: List<Item>, private val activity: Context) : RecyclerView.Adapter<CustomViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -35,7 +39,13 @@ class GEAdapter(private val result: List<Item>) : RecyclerView.Adapter<CustomVie
         val iconImage = holder.view.geImageIcon
         Picasso.get().load(item.icon_large).into(iconImage);
 
+        //If user tapped on individual item
+        holder.itemView.setOnClickListener {
+            val intent = Intent(activity, GEMoreInfo::class.java)
+            intent.putExtra("itemID", item.id)
+            holder.view.context.startActivity(intent)
 
+        }
     }
 
 }

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/moreInfoSpinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moreInfoContraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/currentView"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:text="Current"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionView" />
+
+            <TextView
+                android:id="@+id/descriptionView"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+            <TextView
+                android:id="@+id/last180DaysPriceView"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last180DaysTrendView" />
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/last30DaysPriceView"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last30DaysTrendView" />
+
+            <TextView
+                android:id="@+id/last90DaysPriceView"
+                android:layout_width="73dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/last180DaysPriceView"
+                app:layout_constraintStart_toEndOf="@+id/last30DaysPriceView"
+                app:layout_constraintTop_toBottomOf="@+id/last90DaysTrendView" />
+
+            <TextView
+                android:id="@+id/todayPriceView"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/todayTrendView" />
+
+            <TextView
+                android:id="@+id/last90DaysView"
+                android:layout_width="95dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="171dp"
+                android:text="Last 90 Days"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/last180DaysView"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toEndOf="@+id/last30DaysView"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionView" />
+
+            <TextView
+                android:id="@+id/todayTrendView"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/todayView" />
+
+            <TextView
+                android:id="@+id/last30DaysView"
+                android:layout_width="96dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="45dp"
+                android:text="Last 30 Days"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentPriceView" />
+
+            <TextView
+                android:id="@+id/currentPriceView"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentTrendView" />
+
+            <TextView
+                android:id="@+id/currentTrendView"
+                android:layout_width="82dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentView" />
+
+            <TextView
+                android:id="@+id/todayView"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:text="Today"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionView" />
+
+            <TextView
+                android:id="@+id/last30DaysTrendView"
+                android:layout_width="74dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last30DaysView" />
+
+            <TextView
+                android:id="@+id/last90DaysTrendView"
+                android:layout_width="73dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/last180DaysTrendView"
+                app:layout_constraintStart_toEndOf="@+id/last30DaysTrendView"
+                app:layout_constraintTop_toBottomOf="@+id/last90DaysView" />
+
+            <TextView
+                android:id="@+id/last180DaysView"
+                android:layout_width="101dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:text="Last 180 Days"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/todayPriceView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="130dp"
+                android:layout_height="123dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/last180DaysTrendView"
+                android:layout_width="69dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last180DaysView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="75dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="44dp"
+                android:text="Members"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionView" />
+
+            <TextView
+                android:id="@+id/cripsy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

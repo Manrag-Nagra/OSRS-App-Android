@@ -7,11 +7,14 @@
 
     <EditText
         android:id="@+id/hiscoreEditText"
-        android:layout_width="321dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:ems="10"
         android:hint="Enter player name"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/hiscoresButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,16 +67,16 @@
         android:text="XP"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/hiscoreEditText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/statsRecycleView"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
@@ -82,16 +85,16 @@
         android:id="@+id/hiscoresButton"
         android:layout_width="85dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:background="@color/colorAccent"
         android:text="@android:string/search_go"
         android:textColor="#FFFFFF"
         android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/hiscoreEditText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.294" />
 
     <ProgressBar
         android:id="@+id/hiscoreIndicator"

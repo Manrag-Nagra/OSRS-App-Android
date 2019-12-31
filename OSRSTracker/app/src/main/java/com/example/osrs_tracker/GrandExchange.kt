@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
+import android.widget.Adapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,12 +32,15 @@ class GrandExchange : AppCompatActivity(){
 
     lateinit var layoutManager: LinearLayoutManager
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grand_exchange)
 
         layoutManager = LinearLayoutManager(this@GrandExchange)
         geRecyclerView.layoutManager = layoutManager
+
 
         //When use enter a item in the textview
         geEditText.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
@@ -92,6 +96,7 @@ class GrandExchange : AppCompatActivity(){
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+
     }
 
     //Fetch JSON
@@ -143,7 +148,8 @@ class GrandExchange : AppCompatActivity(){
                             listofItems = responseJson.items
                             geRecyclerView.adapter =
                                 GEAdapter(
-                                    listofItems
+                                    listofItems,
+                                    this@GrandExchange
                                 )
                         }
                     }

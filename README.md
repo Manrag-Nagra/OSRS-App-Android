@@ -14,7 +14,7 @@ The user can also use the "HiScores" option to search a player and get the playe
 * [Picasso](https://square.github.io/picasso/)
 
 
-##API used
+## API used
 * [OSRS API Server](https://github.com/Manrag-Nagra/OSRS-API-Server-Node)
 
 

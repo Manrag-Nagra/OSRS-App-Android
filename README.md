@@ -6,6 +6,9 @@ The user can also use the "HiScores" option to search a player and get the playe
 
 ## Demo
 
+![OSRS App Android Grand Exchange - Animated gif demo](demo/OSRS-Android-GIF.gif)
+![OSRS App Android Hiscores - Animated gif demo](demo/OSRS-Android-GIF-HiScores.gif)
+
 
 ## Technologies Used
 * Kotlin

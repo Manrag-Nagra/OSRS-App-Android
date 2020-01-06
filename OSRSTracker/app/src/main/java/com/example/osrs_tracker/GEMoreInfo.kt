@@ -25,6 +25,9 @@ class GEMoreInfo(): AppCompatActivity() {
         setContentView(R.layout.activity_ge_more_info)
 
         val itemID = intent.getIntExtra("itemID", 0)
+        val itemName = intent.getStringExtra("itemName")
+
+        setTitle((itemName))
 
         moreInfoSpinner.visibility = View.VISIBLE
 

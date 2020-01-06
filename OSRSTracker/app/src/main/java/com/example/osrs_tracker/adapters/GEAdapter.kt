@@ -43,6 +43,7 @@ class GEAdapter(private val result: List<Item>, private val activity: Context) :
         holder.itemView.setOnClickListener {
             val intent = Intent(activity, GEMoreInfo::class.java)
             intent.putExtra("itemID", item.id)
+            intent.putExtra("itemName", item.name)
             holder.view.context.startActivity(intent)
 
         }

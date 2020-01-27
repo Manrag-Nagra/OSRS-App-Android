@@ -45,7 +45,7 @@ class HiScores : AppCompatActivity() {
 
     fun fetchPlayerStats(){
 
-        val url = "http://192.168.2.11:3002/"
+        val url = "<URL HERE>"
 
         val retrofit = Retrofit.Builder().baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create())
